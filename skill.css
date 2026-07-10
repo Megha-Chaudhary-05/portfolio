@@ -365,10 +365,6 @@ body{
 
 @media(max-width: 850px){
 
-    .nav-links{
-        display: none;
-    }
-
     .skills-hero{
         min-height: 90vh;
     }

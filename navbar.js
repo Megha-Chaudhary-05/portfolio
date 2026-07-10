@@ -25,6 +25,7 @@
 
             <!-- Nav Links -->
             <ul class="nav-links">
+                <li><a href="portf.html"   id="nav-home"     >Home</a></li>
                 <li><a href="About.html"    id="nav-about"    >About</a></li>
                 <li><a href="skills.html"   id="nav-skills"   >Skills</a></li>
                 <li><a href="Projects.html" id="nav-projects" >Projects</a></li>
@@ -39,6 +40,7 @@
 
     /* ── 3. Mark active link ────────────────────────────────── */
     const activeMap = {
+        'portf.html'    : 'nav-home',
         'about.html'    : 'nav-about',
         'skills.html'   : 'nav-skills',
         'projects.html' : 'nav-projects',

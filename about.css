@@ -344,10 +344,6 @@ body::before{
 
 @media(max-width: 850px){
 
-    .nav-links{
-        display: none;
-    }
-
     .about-grid{
         grid-template-columns: 1fr;
 
