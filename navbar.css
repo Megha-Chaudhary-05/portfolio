@@ -1,0 +1,137 @@
+/* ============================================================
+   navbar.css  — SINGLE SOURCE OF TRUTH for the shared navbar
+   Loaded by every page. Do NOT add navbar rules in page CSS.
+   ============================================================ */
+
+/* ── Container ────────────────────────────────────────────── */
+.navbar {
+    width: 90%;
+    max-width: 1300px;
+
+    margin: 24px auto;
+    padding: 10px 10px 10px 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Translucent frosted-glass pill */
+    background: rgba(255, 255, 255, 0.52);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 60px;
+
+    box-shadow:
+        0 8px 32px rgba(0, 77, 77, 0.09),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+    font-family: "Space Grotesk", sans-serif;
+
+    /* stay on top of page decorations */
+    position: relative;
+    z-index: 100;
+}
+
+/* ── Logo ─────────────────────────────────────────────────── */
+.navbar .logo {
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #004d4b;
+    text-decoration: none;
+
+    /* remove any pill styling from old per-page CSS */
+    background: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+}
+
+/* ── Nav links list ───────────────────────────────────────── */
+.navbar .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    /* remove any split-pill background from old per-page CSS */
+    background: none;
+    border-radius: 0;
+}
+
+/* ── Individual links ─────────────────────────────────────── */
+.navbar .nav-links a {
+    position: relative;
+
+    color: #1a4e4c;
+    font-size: 14.5px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+
+    /* smooth color on hover */
+    transition: color 0.25s ease;
+}
+
+/* underline reveal on hover / active */
+.navbar .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #0d8f87;
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #0d8f87;
+}
+
+.navbar .nav-links a:hover::after,
+.navbar .nav-links a.active::after {
+    width: 100%;
+}
+
+.navbar .nav-links a.active {
+    color: #0d8f87;
+}
+
+/* ── Resume button ────────────────────────────────────────── */
+.navbar .resume-btn {
+    padding: 12px 26px;
+
+    background: #005956;
+    color: #fff;
+
+    border-radius: 50px;
+    font-size: 14.5px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+
+    /* subtle shine on the button */
+    box-shadow:
+        0 4px 14px rgba(0, 89, 86, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+
+    transition:
+        transform  0.28s ease,
+        box-shadow 0.28s ease,
+        background 0.28s ease;
+}
+
+.navbar .resume-btn:hover {
+    background: #006f6b;
+    transform: translateY(-2px);
+    box-shadow:
+        0 10px 28px rgba(0, 89, 86, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
