@@ -31,10 +31,10 @@ body{
     width: 88%;
     max-width: 1400px;
 
-    min-height: calc(100vh - 110px);
+    min-height: auto;
 
     margin: 0 auto;
-    padding: 30px 0 80px;
+    padding: 120px 0 60px;
 }
 
 
@@ -94,10 +94,10 @@ body{
 .about-copy h1 span{
     display: block;
 
-    font-size: clamp(5rem, 9vw, 9rem);
+    font-size: clamp(3.2rem, 6vw, 5.5rem);
     font-weight: 700;
 
-    letter-spacing: -7px;
+    letter-spacing: -5px;
 
     color: #004f4d;
 
@@ -111,7 +111,7 @@ body{
 
     font-family: "Nexus Stroke", Georgia, serif;
 
-    font-size: clamp(5rem, 8vw, 8rem);
+    font-size: clamp(3rem, 5.5vw, 5rem);
     font-weight: normal;
 
     color: #0d8f87;
@@ -369,10 +369,10 @@ body::before{
     width: 88%;
     max-width: 1400px;
 
-    min-height: 100vh;
+    min-height: auto;
 
     margin: 0 auto;
-    padding: 110px 0 130px;
+    padding: 100px 0;
 }
 
 
@@ -494,7 +494,7 @@ body::before{
     color: #004f4d;
 
     font-size:
-        clamp(3.5rem, 6vw, 6.5rem);
+        clamp(2.5rem, 4.5vw, 4.2rem);
 
     font-weight: 700;
 
@@ -576,9 +576,9 @@ body::before{
 ========================= */
 
 .beyond{
-    min-height: 100vh;
+    min-height: auto;
 
-    padding: 110px 6% 130px;
+    padding: 100px 6% 100px;
 
     position: relative;
     overflow: hidden;
@@ -604,11 +604,11 @@ body::before{
 .beyond-heading h2 span{
     display: block;
 
-    font-size: clamp(4rem, 7vw, 7rem);
+    font-size: clamp(3rem, 5vw, 4.8rem);
 
     font-weight: 700;
 
-    letter-spacing: -6px;
+    letter-spacing: -4px;
 }
 
 .beyond-heading h2 em{
@@ -621,7 +621,7 @@ body::before{
         Georgia,
         serif;
 
-    font-size: clamp(4.5rem, 7vw, 7.5rem);
+    font-size: clamp(3.2rem, 5.5vw, 5.2rem);
 
     font-weight: normal;
 
@@ -862,11 +862,182 @@ body::before{
 
     .beyond-cards{
         margin-top: 70px;
-
+ 
         grid-template-columns: 1fr;
     }
 
     .beyond-card{
         min-height: 340px;
+    }
+}
+
+/* ============================================================
+   CREDENTIALS SECTION (EDUCATION & EXPERIENCE)
+   ============================================================ */
+
+.credentials {
+    width: 88%;
+    max-width: 1400px;
+    min-height: auto;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.credentials-label {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 90px;
+}
+
+.credentials-label span {
+    flex-shrink: 0;
+    color: #6a8582;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+.credentials-line {
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 79, 77, 0.15);
+}
+
+.credentials-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 90px;
+    align-items: start;
+}
+
+.credentials-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.column-title {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #0d8f87;
+    margin-bottom: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 32px;
+    border-left: 2px solid rgba(13, 148, 136, 0.2);
+    transition: border-color 0.3s ease;
+}
+
+.timeline-item:hover {
+    border-left-color: #0d8f87;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -7px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #eaf8f6;
+    border: 2px solid rgba(13, 148, 136, 0.4);
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.timeline-item:hover::before {
+    background: #0d8f87;
+    border-color: #0d8f87;
+    box-shadow: 0 0 0 5px rgba(13, 148, 136, 0.15);
+}
+
+.time-period {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(13, 148, 136, 0.08);
+    border: 1px solid rgba(13, 148, 136, 0.15);
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #0a7a73;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.item-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #004f4d;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 6px;
+}
+
+.item-subtitle {
+    font-size: 15px;
+    font-weight: 600;
+    color: #527570;
+    margin-bottom: 4px;
+}
+
+.item-location {
+    font-size: 14px;
+    font-weight: 500;
+    color: #6a8582;
+    margin-bottom: 15px;
+}
+
+.item-details {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.item-details li {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #526c6a;
+    position: relative;
+    padding-left: 18px;
+}
+
+.item-details li::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #0d8f87;
+    font-size: 12px;
+}
+
+/* ============================================================
+   CREDENTIALS RESPONSIVE
+   ============================================================ */
+
+@media(max-width: 950px) {
+    .credentials-grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+}
+
+@media(max-width: 550px) {
+    .credentials {
+        padding: 60px 0;
+    }
+    
+    .credentials-label {
+        margin-bottom: 50px;
+    }
+    
+    .item-title {
+        font-size: 19px;
     }
 }
