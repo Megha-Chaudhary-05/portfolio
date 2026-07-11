@@ -388,10 +388,10 @@ body::after{
 .home-about{
     width: 90%;
     max-width: 1400px;
-    min-height: 100vh;
+    min-height: auto;
 
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 120px 0 100px;
 
     position: relative;
 }
@@ -617,10 +617,10 @@ body::after{
     width: 90%;
     max-width: 1400px;
 
-    min-height: 90vh;
+    min-height: auto;
 
     margin: 0 auto;
-    padding: 110px 0;
+    padding: 100px 0;
 
     overflow: hidden;
 }
@@ -821,3 +821,79 @@ body::after{
         margin-left: 0;
     }
 }
+
+/* ============================================================
+   RESPONSIVENESS FOR THE HOME ABOUT SECTION (.home-about)
+   ============================================================ */
+@media(max-width: 1024px){
+    .home-about{
+        min-height: auto;
+        padding: 80px 0;
+    }
+
+    .about-label{
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 30px;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .about-label span:first-child{
+        font-size: 2rem;
+    }
+
+    .about-kicker{
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .about-title{
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .data-path{
+        width: 100%;
+        margin: 50px 0;
+    }
+
+    .about-story{
+        width: 100%;
+        margin-left: 0;
+        gap: 50px;
+    }
+}
+
+@media(max-width: 768px){
+    .home-about{
+        padding: 60px 0;
+    }
+
+    .about-label span:first-child{
+        font-size: 1.6rem;
+    }
+
+    .about-story{
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .story-block{
+        padding-top: 20px;
+    }
+
+    .story-main p{
+        font-size: 19px;
+    }
+
+    .story-block p{
+        font-size: 15.5px;
+    }
+
+    .about-link{
+        margin-top: 20px;
+    }
+}

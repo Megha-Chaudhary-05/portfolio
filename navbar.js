@@ -13,7 +13,10 @@
 
 (function () {
     /* ── 1. Detect current page ─────────────────────────────── */
-    const page = window.location.pathname.split('/').pop().toLowerCase();
+    let page = window.location.pathname.split('/').pop().toLowerCase();
+    if (!page) {
+        page = 'portf.html';
+    }
 
     /* ── 2. Build the navbar HTML ───────────────────────────── */
     const header = document.createElement('header');
@@ -32,8 +35,15 @@
                 <li><a href="Contact.html"  id="nav-contact"  >Contact</a></li>
             </ul>
 
+            <!-- Mobile Toggle Button -->
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
             <!-- Resume Button -->
-            <a href="Resume1.pdf" target="_blank" class="resume-btn">Resume</a>
+            <a href="Megha_Chaudhary_Resume.pdf" target="_blank" class="resume-btn">Resume</a>
 
         </nav>
     `;
@@ -53,6 +63,18 @@
         if (activeLink) activeLink.classList.add('active');
     }
 
-    /* ── 4. Inject before first body child ──────────────────── */
+    /* ── 4. Mobile menu logic ────────────────────────────────── */
+    const toggleBtn = header.querySelector('.nav-toggle');
+    const navLinks = header.querySelector('.nav-links');
+    if (toggleBtn && navLinks) {
+        toggleBtn.addEventListener('click', () => {
+            const isExpanded = toggleBtn.getAttribute('aria-expanded') === 'true';
+            toggleBtn.setAttribute('aria-expanded', !isExpanded);
+            toggleBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    /* ── 5. Inject before first body child ──────────────────── */
     document.body.insertBefore(header, document.body.firstChild);
 })();

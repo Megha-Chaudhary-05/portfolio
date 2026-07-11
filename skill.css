@@ -31,10 +31,10 @@ body{
     width: 88%;
     max-width: 1400px;
 
-    min-height: calc(100vh - 110px);
+    min-height: auto;
 
     margin: 0 auto;
-    padding: 30px 0 80px;
+    padding: 120px 0 50px;
 
     position: relative;
 
@@ -124,11 +124,11 @@ body{
 .skills-title span{
     display: block;
 
-    font-size: clamp(5rem, 10vw, 10rem);
+    font-size: clamp(3.2rem, 6vw, 5.5rem);
 
     font-weight: 700;
 
-    letter-spacing: -8px;
+    letter-spacing: -5px;
 
     color: #004f4d;
 
@@ -148,7 +148,7 @@ body{
         Georgia,
         serif;
 
-    font-size: clamp(5rem, 9vw, 9rem);
+    font-size: clamp(3rem, 5.5vw, 5rem);
 
     font-weight: normal;
 
@@ -400,10 +400,10 @@ body{
     width: 88%;
     max-width: 1400px;
 
-    min-height: 100vh;
+    min-height: auto;
 
     margin: 0 auto;
-    padding: 110px 0 140px;
+    padding: 80px 0 100px;
 }
 
 
@@ -665,10 +665,10 @@ body{
 .resume-contact{
     width: 88%;
     max-width: 1400px;
-    min-height: 100vh;
+    min-height: auto;
 
     margin: 0 auto;
-    padding: 110px 0 80px;
+    padding: 80px 0 80px;
 
     display: flex;
     flex-direction: column;
